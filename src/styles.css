@@ -1,0 +1,333 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF7ED;
+  font-family: "Inter", sans-serif;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*==========
+HEADER COMPONENT
+============*/
+
+.header {
+  padding: 2em;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  font-weight: bold;
+  font-size: 1.75rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #050505;
+  margin: 0;
+}
+
+.header-nav {
+  display: flex;
+  gap: 1.25em;
+}
+
+.header-nav-item {
+  font-weight: bold;
+  text-decoration: none;
+  color: #383838;
+  margin: 0;
+}
+
+.header-logo:hover,
+.header-nav-item:hover {
+  text-decoration: underline;
+}
+
+/*==============
+FOOTER COMPONENT
+===============*/
+footer {
+  background-color: #161616;
+  color: #787878;
+  padding: 1.5em;
+  text-align: center;
+  margin-top: auto;
+}
+
+/*===========
+HOME PAGE
+=============*/
+
+.home-container {
+  background: no-repeat center center fixed;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)),url("./assets/images/home-hero.jpg");
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  justify-content: center;
+  gap: 1em;
+}
+
+.home-title {
+  color: white;
+}
+
+.home-description {
+  color: white;
+  line-height: 1.5;
+}
+
+.new-line {
+  display: block;
+}
+
+.home-container-btn {
+  background-color: #ff8c38;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 1em;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  margin-top: 1.5em;
+}
+
+/*============
+ABOUT PAGE
+=============*/
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.about-img {
+  max-width: 100%;
+  max-height: 40vh;
+  object-fit: cover;
+}
+
+.about-inner-container {
+  padding: 1.5em;
+}
+
+.about-title {
+
+}
+
+.about-description {
+  line-height: 1.5;
+}
+
+.about-bottom-container {
+  margin: 3em 0;
+  padding: 1em;
+  background-color: #ffcc8d;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border-radius: 10px;
+}
+
+.about-bottom-title {
+  line-height: 1.5;
+}
+
+.about-bottom-btn {
+  margin: 1em 0 .5em;
+  padding: 1em 1.5em;
+  background-color: #050505;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  align-self: start;
+  font-weight: bold;
+}
+
+.about-bottom-btn:active {
+  transform: scale(0.95);
+}
+
+
+/*=========
+HOUSES PAGES
+==========*/
+.houses-wrapper,
+.house-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 2em 3em;
+}
+
+.houses-explore-title {
+  margin: 0;
+  padding: 1em 0 .75em;
+}
+
+.houses-list-filter-buttons {
+  display: flex;
+  gap: 1em;
+  padding: 0 0 2em;
+}
+
+.houses-filter-btn {
+  padding: .5em 2em;
+  margin-right: 1em;
+  border: none;
+  border-radius: 5px;
+  color: #383838;
+  background-color: #ffe7c9;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.simple-selected {
+  background-color: #CC8500;
+  color: white;
+}
+
+.rugged-selected {
+  background-color: #007A00;
+  color: white;
+}
+
+.luxury-selected {
+  background-color: #0A0A0A;
+  color: white;
+}
+
+.simple-hover:hover {
+  background-color: #CC8500;
+  color: white;
+}
+
+.rugged-hover:hover {
+  background-color: #007A00;
+  color: white;
+}
+
+.luxury-hover:hover {
+  background-color: #0A0A0A;
+  color: white;
+}
+
+.houses-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+.house-link-detail {
+  text-decoration: none;
+  color: #161616;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.house-img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.house-container-inner {
+  padding-top: 2.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.house-title {
+  font-size: 1.75rem;
+}
+
+.light {
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+
+.house-price {
+  font-size: 1.35rem;
+}
+
+.house-type {
+  font-style: normal;
+  background-color: gray;
+  padding: .5em 1.5em;
+  border-radius: 10px;
+  color: white;
+  align-self: flex-start;
+}
+
+.house-btn {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: .75em 1em;
+  font-size: 1.15rem;
+  font-weight: bold;
+  background-color: #ff8c38;
+}
+
+.simple {
+  background-color: #CC8500;
+}
+
+.rugged {
+  background-color: #007A00;
+}
+
+.luxury {
+  background-color: #0A0A0A;
+}
+
+/*======
+HOST PAGES
+========*/
+.host-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.host-nav {
+  width: 80%;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  padding-left: 2em;
+  padding-bottom: 2em;
+}
+
+.host-nav-item {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+main {
+  display: flex;
+  flex-grow: 1;
+}
+
+h1, h2 {
+  margin: 0;
+}
