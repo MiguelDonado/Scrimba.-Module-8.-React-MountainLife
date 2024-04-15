@@ -9,7 +9,12 @@ import HouseDetail from './pages/houses/HouseDetail'
 import Dashboard from './pages/host/Dashboard'
 import Income from './pages/host/Income'
 import HostHouses from './pages/host/HostHouses'
+import HostHouseDetail from './pages/host/HostHouseDetail'
 import Reviews from './pages/host/Reviews'
+import HostHouseInfo from './pages/host/HostHouseInfo'
+import HostHousePricing from './pages/host/HostHousePricing'
+import HostHousePhotos from './pages/host/HostHousePhotos'
+
 
 export default function App () {
   return (
@@ -25,8 +30,13 @@ export default function App () {
             <Route path="host" element={<HostLayout />}>
               <Route index element={<Dashboard />} />
               <Route path="income" element={<Income />} />
-              <Route path="houses" element={<HostHouses />} />
               <Route path="reviews" element={<Reviews />} />
+              <Route path="houses" element={<HostHouses />} />
+              <Route path="houses/:id" element={<HostHouseDetail />}>
+                <Route index element={<HostHouseInfo/>}/>
+                <Route path="pricing" element={<HostHousePricing/>}/>
+                <Route path="photos" element={<HostHousePhotos/>}/>
+              </Route>
             </Route>
           </Route>
         </Routes>
