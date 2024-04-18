@@ -1,10 +1,15 @@
 import React from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useLocation } from 'react-router-dom'
 
 export default function HouseDetail() {
     const params = useParams()
     const [house, setHouse] = React.useState('')
 
+    const location = useLocation()
+
+    const search = location.state?.search || ""
+    const type = location.state?.type || 'all'
+    
     React.useEffect(() => {
         fetch(`/api/houses/${params.id}`)
             .then(response => response.json())
@@ -16,7 +21,14 @@ export default function HouseDetail() {
     }
     return (
         <div className="house-wrapper">
-            <img src={house.imageUrl}/>
+            <Link 
+                to={`..${search}`}
+                relative="path"
+                className="host-house-detail-back-button house-back"
+            >
+                &larr; <span className="back-button-hover">{`Back to ${type} vans`}</span>
+            </Link>
+            <img src={house.imageUrl} className="house-img"/>
             <div className="house-container-inner">
                 <i className={`house-type ${house.type}`}>{house.type}</i>
                 <h1 className="house-title">{house.name}</h1>

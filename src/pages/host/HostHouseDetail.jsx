@@ -65,7 +65,7 @@ export default function HostHouseDetail() {
                     Photos
                     </NavLink>
                 </nav>
-                <Outlet />
+                <Outlet context={{ currentVan }}/>
             </div>
 
         </div>

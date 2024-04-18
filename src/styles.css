@@ -15,6 +15,10 @@ html, body {
   min-height: 100vh;
 }
 
+button {
+  font-family: inherit;
+}
+
 /*==========
 HEADER COMPONENT
 ============*/
@@ -166,6 +170,7 @@ HOUSES PAGES
   display: flex;
   flex-direction: column;
   padding: 1em 2em 3em;
+  gap: .5em;
 }
 
 .houses-explore-title {
@@ -175,19 +180,30 @@ HOUSES PAGES
 
 .houses-list-filter-buttons {
   display: flex;
-  gap: 1em;
+  gap: .5em;
   padding: 0 0 2em;
 }
 
 .houses-filter-btn {
   padding: .5em 2em;
-  margin-right: 1em;
+  margin-right: .75em;
   border: none;
   border-radius: 5px;
   color: #383838;
   background-color: #ffe7c9;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.houses-filter-btn-clear {
+  cursor: pointer;
+  border: none;
+  background-color: #FFF7ED;
+  text-decoration: underline;
+  white-space: nowrap;
+  color: #4D4D4D;
+  font-size: .9rem;
+  font-weight: 550;
 }
 
 .simple-selected {
@@ -232,6 +248,10 @@ HOUSES PAGES
   display: flex;
   flex-direction: column;
   gap: 1em;
+}
+
+.house-back {
+  padding: 0 0 1.25em;
 }
 
 .house-img {
@@ -448,6 +468,16 @@ HOST PAGES
   font-weight: 500;
 }
 
+.host-house-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.host-house-info-item {
+  margin: 0 0 .35em;
+  font-weight: normal;
+}
 
 
 
@@ -463,6 +493,10 @@ HOST PAGES
 /*===========
 UTILITY CLASSES
 ============*/
+
+.bold {
+  font-weight: bold;
+}
 
 .bold-bigger {
   font-weight: 800;
