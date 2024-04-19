@@ -14,6 +14,7 @@ import Reviews from './pages/host/Reviews'
 import HostHouseInfo from './pages/host/HostHouseInfo'
 import HostHousePricing from './pages/host/HostHousePricing'
 import HostHousePhotos from './pages/host/HostHousePhotos'
+import NotFound from './pages/NotFound'
 
 
 export default function App () {
@@ -38,6 +39,7 @@ export default function App () {
                 <Route path="photos" element={<HostHousePhotos/>}/>
               </Route>
             </Route>
+          <Route path="*" element={<NotFound />}/>
           </Route>
         </Routes>
       </BrowserRouter>

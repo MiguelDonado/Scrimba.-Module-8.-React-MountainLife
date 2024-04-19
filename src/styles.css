@@ -479,6 +479,34 @@ HOST PAGES
   font-weight: normal;
 }
 
+/*==========
+NOT FOUND
+==========*/
+.not-found-container {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  width: 100%;
+}
+
+.not-found-title {
+  font-size: 2.5rem;
+}
+
+.not-found-btn {
+  margin-top: 2em;
+  width: 100%;
+  background-color: #161616;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 1em;
+  border-radius: 8px;
+  text-align: center;
+}
 
 
 
@@ -501,6 +529,10 @@ UTILITY CLASSES
 .bold-bigger {
   font-weight: 800;
   font-size: 1.3em;
+}
+
+.next-line {
+  display: block;
 }
 
 
