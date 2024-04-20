@@ -9,7 +9,7 @@ export default function HostHouseInfo() {
         <div className="host-house-info-container">
             <h4 className="host-house-info-item"><span className="bold">Name:</span> {currentVan.name}</h4>
             <h4 className="host-house-info-item"><span className="bold">Category: </span>{type}</h4>
-            <h4 className="host-house-info-item"><span className="bold">Description: </span>{currentVan.description}</h4>
+            <h4 className="host-house-info-item-description"><span className="bold">Description: </span>{currentVan.description}</h4>
             <h4 className="host-house-info-item"><span className="bold">Visibility: </span>Public</h4>
         </div>
     )

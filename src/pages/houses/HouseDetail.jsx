@@ -24,17 +24,17 @@ export default function HouseDetail() {
             <Link 
                 to={`..${search}`}
                 relative="path"
-                className="host-house-detail-back-button house-back"
+                className="house-detail-back-button"
             >
                 &larr; <span className="back-button-hover">{`Back to ${type} vans`}</span>
             </Link>
             <img src={house.imageUrl} className="house-img"/>
-            <div className="house-container-inner">
-                <i className={`house-type ${house.type}`}>{house.type}</i>
-                <h1 className="house-title">{house.name}</h1>
-                <h2 className="house-price">{`$${house.price}`}<span className="light">/day</span></h2>
-                <p className="house-description">{house.description}</p>
-                <button className="house-btn">Rent this van</button>
+            <div className="house-detail-container-inner">
+                <i className={`house-detail-type ${house.type}`}>{house.type}</i>
+                <h1 className="house-detail-title">{house.name}</h1>
+                <h2 className="house-detail-price">{`$${house.price}`}<span className="house-detail-per-day">/day</span></h2>
+                <p className="house-detail-description">{house.description}</p>
+                <button className="house-detail-btn">Rent this van</button>
             </div>
         </div>
     )

@@ -32,9 +32,11 @@ export default function Houses() {
                 >
                     <img className="house-img" src={house.imageUrl} />
                     <div className="house-container-inner">
-                        <h1 className="house-title">{house.name}</h1>
-                        <p className="house-price">{`$${house.price}/day`}</p>
-                        <i className={`house-type ${house.type}`}>{house.type}</i>
+                        <div className="house-container-inner-container">
+                            <h1 className="house-title">{house.name}</h1>
+                            <i className={`house-type ${house.type}`}>{house.type}</i>
+                        </div> 
+                        <p className="house-price">{`$${house.price}`}<span className="next-line per-day">/day</span></p>
                     </div>
                 </Link>
             </div>

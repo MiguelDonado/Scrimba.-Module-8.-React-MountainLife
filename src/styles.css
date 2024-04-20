@@ -171,6 +171,10 @@ HOUSES PAGES
   flex-direction: column;
   padding: 1em 2em 3em;
   gap: .5em;
+  width: 100%;
+}
+.house-wrapper {
+  gap: 1em;
 }
 
 .houses-explore-title {
@@ -237,6 +241,7 @@ HOUSES PAGES
 }
 
 .houses-container {
+  margin-top: .5em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2em;
@@ -244,51 +249,118 @@ HOUSES PAGES
 
 .house-link-detail {
   text-decoration: none;
-  color: #161616;
   display: flex;
   flex-direction: column;
-  gap: 1em;
-}
-
-.house-back {
-  padding: 0 0 1.25em;
+  gap: .5em;
+  color: #161616;
+  height: 100%;
+  width: 100%;
 }
 
 .house-img {
   width: 100%;
+  height: 100%;
   border-radius: 8px;
 }
 
 .house-container-inner {
-  padding-top: 2.5em;
+  padding-top: .5em;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: space-between;
+}
+
+
+.house-container-inner-container {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: .7rem;
 }
 
 .house-title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 650;
+  white-space: nowrap;
 }
-
-.light {
-  font-weight: normal;
-  font-size: 1.25rem;
-}
-
 .house-price {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 650;
 }
-
+.per-day {
+  font-size: 1rem;
+  text-align: end;
+  font-weight: 500;
+}
 .house-type {
   font-style: normal;
   background-color: gray;
-  padding: .5em 1.5em;
-  border-radius: 10px;
+  padding: .6em 1.2em;
+  border-radius: 8px;
   color: white;
   align-self: flex-start;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: .5px;
+  font-size: 1.1rem;
 }
 
 .house-btn {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: .75em 1em;
+  font-size: 1.15rem;
+  font-weight: bold;
+  background-color: #ff8c38;
+}
+
+
+
+.house-detail-container-inner {
+  padding-top: 2.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.house-detail-type {
+  font-style: normal;
+  background-color: gray;
+  padding: .6em 1.2em;
+  border-radius: 8px;
+  color: white;
+  align-self: flex-start;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: .5px;
+  font-size: 1.1rem;
+}
+.house-detail-title {
+  font-size: 2.25rem;
+  margin: 0;
+  font-weight: 650;
+  white-space: nowrap;
+}
+.house-detail-price {
+  font-size: 1.75rem;
+  margin: 0;
+  font-weight: 750;
+}
+.house-detail-per-day {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0;
+}
+.house-detail-description {
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 475;
+  font-size: 1.1rem;
+}
+.house-detail-btn {
+  margin-top: .25em;
   color: white;
   border: none;
   border-radius: 5px;
@@ -317,7 +389,8 @@ HOST PAGES
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-bottom: 1em;
+  padding: 2em; 
+  padding-bottom: 3em; 
 }
 
 .host-nav {
@@ -325,35 +398,36 @@ HOST PAGES
   display: flex;
   gap: 1em;
   justify-content: space-between;
-  padding-left: 2em;
-  padding-bottom: 2em;
+  padding-bottom: 3em;
 }
 
 .host-nav-item {
   color: black;
   text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 450;
 }
 
 .host-houses-title {
-  padding: 0 0 1.25em 1.25em;
-  font-size: 1.75rem;
+  padding-bottom: 1.25em;
+  font-size: 2.1rem;
+  font-weight: 750;
 }
 
 .host-houses-container {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  padding: 0 1.5em;
   width: 100%;
 }
 
 .host-houses-single {
   display: flex;
   flex-direction: row;
-  gap: 1em;
-  padding: 1em 1.5em;
+  gap: 1.25em;
+  padding: 1.35em;
   background-color: white;
-  border-radius: 3px;
+  border-radius: 6px;
   width: 100%;
 }
 
@@ -363,32 +437,31 @@ HOST PAGES
 }
 
 .host-houses-single-img {
-  width: 20%;
+  width: 15%;
   border-radius: 5px;
 }
 
 .host-houses-single-inner {
-  width: 80%;
+  width: 85%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: .75em;
+  gap: .65em;
 }
 
 .host-houses-single-inner-title {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
 }
 
 .host-houses-single-inner-price {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 450;
 }
 
 .host-house-detail-wrapper {
-  padding: 0 2em;
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1.5em;
 }
 
 .host-house-detail-house-container {
@@ -430,6 +503,7 @@ HOST PAGES
   text-align: center;
   align-self: self-start;
   font-style: normal;
+  text-transform: capitalize;
 }
 
 .host-house-detail-name {
@@ -443,9 +517,11 @@ HOST PAGES
   font-size: 1.1em;
 }
 
-.host-house-detail-back-button {
+.host-house-detail-back-button,
+.house-detail-back-button {
   color: #201F1D;
   text-decoration: none;
+  margin-bottom: 1.25em;
 }
 
 .back-button-hover:hover {
@@ -474,7 +550,8 @@ HOST PAGES
   gap: 1em;
 }
 
-.host-house-info-item {
+.host-house-info-item,
+.host-house-info-item-description {
   margin: 0 0 .35em;
   font-weight: normal;
 }
@@ -507,6 +584,188 @@ NOT FOUND
   border-radius: 8px;
   text-align: center;
 }
+
+
+/*========
+MEDIA QUERY
+=========*/
+@media (min-width:768px) {
+  .site-wrapper{
+    background-color: red;
+  }
+
+  .header-logo {
+    font-size: 1.9rem;
+  }
+  .header-nav-item  {
+    font-size: 1.15rem;
+  }
+  footer {
+    font-size: 1.15rem;
+  }
+  .home-title, 
+  .about-title,
+  .houses-explore-title{
+    font-size: 2.15rem;
+  }
+  .home-description, 
+  .about-description {
+    font-size: 1.15rem;
+  }
+  .home-container-btn,
+  .about-bottom-btn {
+    font-size: 1.1rem;
+  }
+  .about-inner-container {
+    padding: 2em;
+  }
+  .about-bottom-title {
+    font-size: 1.75rem;
+  }
+  .houses-list-filter-buttons{
+    gap: 1.5em;
+  }
+  .houses-filter-btn {
+    font-size: 1.1rem;
+  }
+  .houses-filter-btn-clear {
+    font-size: 1rem;
+  }
+  .houses-container {
+    gap: 2.7em;
+  }
+  .house-title,
+  .house-price {
+    font-size: 1.75rem;
+  }
+  .house-type,
+  .house-detail-type {
+    font-size: 1.17rem;
+  }
+  .per-day {
+    font-size: 1.1rem;
+  }
+  .header,
+  .home-container,
+  .houses-wrapper,
+  .not-found-container,
+  .host-wrapper {
+    padding-right: 2.5em;
+    padding-left: 2.5em;
+  }
+  .house-wrapper {
+    padding-right: 2.5em;
+    padding-left: 2.5em;
+  }
+  .house-detail-back-button,
+  .host-house-detail-back-button {
+    font-size: 1.1rem;
+  }  
+  .house-img {
+    max-width: 550px;
+  }
+  .house-detail-title {
+    font-size: 2.5rem;
+  }
+  .house-detail-price {
+    font-size: 2rem;
+  }
+  .house-detail-per-day {
+    font-size: 1.45rem;
+  }
+  .house-detail-description,
+  .host-nav-item {
+    font-size: 1.25rem;
+  }
+  .house-detail-btn {
+    font-size: 1.25rem;
+  }
+  .not-found-title {
+    font-size: 2.75rem;
+  }
+  .not-found-btn {
+    font-size: 1.75rem;
+  }
+  .host-houses-title {
+    font-size: 2.25rem;
+  }
+  .host-houses-container {
+    gap: 1.25em;
+  }
+  .host-houses-single {
+    gap: 1.5em;
+  }
+  .host-houses-single-inner {
+    gap: .75em;
+  }
+  .host-houses-single-inner-title {
+    font-size: 1.6rem;
+  }
+  .host-houses-single-inner-price {
+    font-size: 1.25rem;
+  }
+  .host-wrapper {
+    padding-bottom: 4em;
+  }
+  .host-house-detail-wrapper {
+    margin-top: 1em;
+  }
+  .host-house-detail-house-container {
+    padding: 2em;
+  }
+  .host-house-detail-house-container-above-nav {
+    gap: 1.75em;
+  }
+  .host-house-detail-inner {
+    gap: 1.25em;
+  }
+  .host-house-detail-type {
+    font-size: 1.15rem;
+    padding: .5em 1em;
+  }
+  .host-house-detail-name {
+    font-size: 1.9rem;
+  }
+  .host-house-detail-price {
+    font-size: 1.25rem
+  }
+  .host-house-detail-nav {
+    padding: 2em 0 2.5em;
+  }
+  .host-house-nav-item {
+    font-size: 1.125rem;
+  }
+  .host-house-info-container {
+    gap: 1.25em;
+  }
+  .host-house-info-item,
+  .host-house-info-item-description {
+    font-size: 1.125rem;
+  }
+  .host-house-info-item-description {
+    line-height: 1.5;
+  }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
