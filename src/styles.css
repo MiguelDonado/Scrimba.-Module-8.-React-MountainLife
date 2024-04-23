@@ -15,6 +15,12 @@ html, body {
   min-height: 100vh;
 }
 
+.site-wrapper-mirror {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 button {
   font-family: inherit;
 }
@@ -590,10 +596,6 @@ NOT FOUND
 MEDIA QUERY
 =========*/
 @media (min-width:768px) {
-  .site-wrapper{
-    background-color: red;
-  }
-
   .header-logo {
     font-size: 1.9rem;
   }
@@ -745,37 +747,188 @@ MEDIA QUERY
   .host-house-info-item-description {
     line-height: 1.5;
   }
-
-
-
-
-
-
-
-
-
-
-
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (min-width:1024px) {
+  .header-logo {
+    font-size: 2.1rem;
+  }
+  .header-nav-item  {
+    font-size: 1.35rem;
+  }
+  footer {
+    font-size: 1.35rem;
+  }
+  .home-title, 
+  .about-title,
+  .houses-explore-title{
+    font-size: 2.35rem;
+  }
+  .home-description, 
+  .about-description {
+    font-size: 1.35rem;
+  }
+  .home-container-btn,
+  .about-bottom-btn {
+    font-size: 1.3rem;
+  }
+  .about-inner-container {
+    padding: 2em;
+  }
+  .about-bottom-title {
+    font-size: 1.95rem;
+  }
+  .houses-list-filter-buttons{
+    gap: 1.5em;
+  }
+  .houses-filter-btn {
+    font-size: 1.3rem;
+  }
+  .houses-filter-btn-clear {
+    font-size: 1.2rem;
+  }
+  .houses-container {
+    gap: 2.7em;
+  }
+  .house-title,
+  .house-price {
+    font-size: 1.95rem;
+  }
+  .house-type,
+  .house-detail-type {
+    font-size: 1.37rem;
+  }
+  .per-day {
+    font-size: 1.3rem;
+  }
+  .header,
+  .home-container,
+  .houses-wrapper,
+  .not-found-container,
+  .host-wrapper {
+    padding-right: 2.5em;
+    padding-left: 2.5em;
+  }
+  .house-wrapper {
+    padding-right: 2.5em;
+    padding-left: 2.5em;
+  }
+  .house-detail-back-button,
+  .host-house-detail-back-button {
+    font-size: 1.3rem;
+  }  
+  .house-detail-title {
+    font-size: 2.7rem;
+  }
+  .house-detail-price {
+    font-size: 2.2rem;
+  }
+  .house-detail-per-day {
+    font-size: 1.65rem;
+  }
+  .house-detail-description,
+  .host-nav-item {
+    font-size: 1.45rem;
+  }
+  .house-detail-btn {
+    font-size: 1.45rem;
+  }
+  .not-found-title {
+    font-size: 2.95rem;
+  }
+  .not-found-btn {
+    font-size: 1.95rem;
+  }
+  .host-houses-title {
+    font-size: 2.45rem;
+  }
+  .host-houses-container {
+    gap: 1.25em;
+  }
+  .host-houses-single {
+    gap: 1.5em;
+  }
+  .host-houses-single-inner {
+    gap: .75em;
+  }
+  .host-houses-single-inner-title {
+    font-size: 1.8rem;
+  }
+  .host-houses-single-inner-price {
+    font-size: 1.45rem;
+  }
+  .host-wrapper {
+    padding-bottom: 4em;
+  }
+  .host-house-detail-wrapper {
+    margin-top: 1em;
+  }
+  .host-house-detail-house-container {
+    padding: 2em;
+  }
+  .host-house-detail-house-container-above-nav {
+    gap: 1.75em;
+  }
+  .host-house-detail-inner {
+    gap: 1.25em;
+  }
+  .host-house-detail-type {
+    font-size: 1.35rem;
+    padding: .5em 1em;
+  }
+  .host-house-detail-name {
+    font-size: 2.1rem;
+  }
+  .host-house-detail-price {
+    font-size: 1.45rem
+  }
+  .host-house-detail-nav {
+    padding: 2em 0 2.5em;
+  }
+  .host-house-nav-item {
+    font-size: 1.325rem;
+  }
+  .host-house-info-container {
+    gap: 1.25em;
+  }
+  .host-house-info-item,
+  .host-house-info-item-description {
+    font-size: 1.325rem;
+  }
+  .host-house-info-item-description {
+    line-height: 1.5;
+  }
+}
+@media (min-width:1500px) {
+  .site-wrapper-mirror {
+    flex-direction: row;
+  }
+  .houses-container {
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    row-gap: 2.5em;
+  }
+  .header {
+    padding: 20em 3em 3em;
+    flex-direction: column;
+    justify-content: start;
+    gap: 5em;
+    background: #F3904F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3B4371, #F3904F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3B4371, #F3904F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .header-logo {
+    font-size: 4rem;
+    letter-spacing: 1.5px;
+  }
+  .header-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+  }
+  .header-nav-item {
+    font-size: 2.25rem;
+  }
+}
 
 /*===========
 UTILITY CLASSES
@@ -793,10 +946,6 @@ UTILITY CLASSES
 .next-line {
   display: block;
 }
-
-
-
-
 
 main {
   display: flex;
