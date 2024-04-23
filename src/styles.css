@@ -591,6 +591,11 @@ NOT FOUND
   text-align: center;
 }
 
+main {
+  display: flex;
+  flex-grow: 1;
+}
+
 
 /*========
 MEDIA QUERY
@@ -663,7 +668,7 @@ MEDIA QUERY
   .host-house-detail-back-button {
     font-size: 1.1rem;
   }  
-  .house-img {
+  .house-link-detail {
     max-width: 550px;
   }
   .house-detail-title {
@@ -902,12 +907,17 @@ MEDIA QUERY
 @media (min-width:1500px) {
   .site-wrapper-mirror {
     flex-direction: row;
+    position: relative;
+    width: 100%;
   }
   .houses-container {
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(355px,1fr));
     row-gap: 2.5em;
   }
   .header {
+    position: fixed;
+    width: 650px;
+    height: 100%;
     padding: 20em 3em 3em;
     flex-direction: column;
     justify-content: start;
@@ -915,6 +925,12 @@ MEDIA QUERY
     background: #F3904F;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #3B4371, #F3904F);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #3B4371, #F3904F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  main {
+    margin-left: 650px;
+  }
+  footer {
+    z-index: 1;
   }
   .header-logo {
     font-size: 4rem;
@@ -947,10 +963,7 @@ UTILITY CLASSES
   display: block;
 }
 
-main {
-  display: flex;
-  flex-grow: 1;
-}
+
 
 h1, h2 {
   margin: 0;
