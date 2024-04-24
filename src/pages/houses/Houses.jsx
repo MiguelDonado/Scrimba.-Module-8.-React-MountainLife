@@ -1,18 +1,24 @@
 import React from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
+import { getHouses } from '../../api'
 
 export default function Houses() {
     
     const [houses, setHouses] = React.useState([])
     const [searchParams, setSearchParams] = useSearchParams()
+    const [loading, setLoading] = React.useState(false)
 
     const typeFilter = searchParams.get('type')
 
     
     React.useEffect(() => {
-        fetch("/api/houses")
-        .then(res => res.json())
-        .then(data => setHouses(data.houses))
+        async function loadHouses() {
+            setLoading(true)
+            const data = await getHouses()
+            setHouses(data)
+            setLoading(false)
+        }
+        loadHouses()
     },[])
     
     const displayedHouses = typeFilter
@@ -52,6 +58,10 @@ export default function Houses() {
             }
             return prevParams
         })
+    }
+
+    if (loading){
+        return <h1>Loading...</h1>
     }
     
     return (

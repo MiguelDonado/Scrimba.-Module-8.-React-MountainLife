@@ -4,11 +4,16 @@ import { Link } from 'react-router-dom'
 export default function HostHouses() {
 
 const [houses, setHouses] = React.useState([])
+const [loading, setLoading] = React.useState(false)
 
 React.useEffect(()=>{
+    setLoading(true)
     fetch("/api/host/houses")
         .then(res => res.json())
-        .then(data => setHouses(data.houses))
+        .then(data => {
+            setHouses(data.houses)
+            setLoading(false)
+        })
 }, [])
     
 const hostHousesElements = houses.map(house => {
@@ -25,8 +30,8 @@ const hostHousesElements = houses.map(house => {
     )
 })
     
-    if (!houses.length){
-        return <h2> Loading...</h2>
+    if (loading){
+        return <h1>Loading...</h1>
     }
 
     return (

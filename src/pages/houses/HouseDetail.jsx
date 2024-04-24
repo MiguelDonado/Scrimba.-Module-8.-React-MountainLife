@@ -4,6 +4,7 @@ import { useParams, Link, useLocation } from 'react-router-dom'
 export default function HouseDetail() {
     const params = useParams()
     const [house, setHouse] = React.useState('')
+    const [loading, setLoading] = React.useState(false)
 
     const location = useLocation()
 
@@ -11,13 +12,18 @@ export default function HouseDetail() {
     const type = location.state?.type || 'all'
     
     React.useEffect(() => {
+        setLoading(true)
         fetch(`/api/houses/${params.id}`)
             .then(response => response.json())
-            .then(data => setHouse(data.houses))
+            .then(data => {
+                setHouse(data.houses) 
+                setLoading(false)
+    })
+        
     },[params.id])
 
-    if (!house){
-        return <h2>Loading...</h2>
+    if (loading){
+        return <h1>Loading...</h1>
     }
     return (
         <div className="house-wrapper">

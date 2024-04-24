@@ -4,6 +4,7 @@ import { useParams, Link, Outlet, NavLink } from 'react-router-dom'
 export default function HostHouseDetail() {
     const { id } = useParams()
     const [currentVan, setCurrentVan] = React.useState(null)
+    const [loading, setLoading] = React.useState(false)
     
     const activeStyles = {
         textDecoration: "underline",
@@ -12,9 +13,13 @@ export default function HostHouseDetail() {
     }
 
     React.useEffect(()=>{
+        setLoading(true)
         fetch(`/api/host/houses/${id}`)
             .then(res => res.json())
-            .then(data => setCurrentVan(data.houses))
+            .then(data => {
+                setCurrentVan(data.houses)
+                setLoading(false)
+            })
     }, [])
     
     if (!currentVan){
